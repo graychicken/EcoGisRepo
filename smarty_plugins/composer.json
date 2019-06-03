@@ -1,0 +1,21 @@
+{
+    "name": "r3gis/smarty-plugins",
+    "type": "smarty-plugin",
+    "description": "Smarty plugin collection",
+    "keywords": [
+        "plugins"
+    ],
+    "homepage": "http://www.r3.gis.com",
+    "license": "proprietary",
+    "authors": [{
+        "name": "Daniel Degasperi",
+        "email": "daniel.degasperi@r3-gis.com"
+    }],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "suggest": {
+        "r3gis/applicationbundle": "Allow the usage of the r3currency to print the current currency"
+    }
+}
