@@ -1,0 +1,61 @@
+#!/usr/bin/env php
+<?php
+$autoinit = false;
+require __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/../etc/config.php';
+
+use Symfony\Component\Console\Application;
+use EcogisBundle\Command\ExportSeapCommand;
+use EcogisBundle\Command\ExportBuildingsCommand;
+
+class ConfigClass
+{
+    static $dsn;
+    static $authOptions;
+    static $languageSettings;
+
+    public static function setDsn(array $dsn)
+    {
+        self::$dsn = $dsn;
+    }
+
+    public static function getDsn()
+    {
+        return self::$dsn;
+    }
+
+    public static function setAuthOptions(array $authOptions)
+    {
+        self::$authOptions = $authOptions;
+    }
+
+    public static function getAuthOptions()
+    {
+        return self::$authOptions;
+    }
+    
+    public static function setLanguageSettings($languages, $jQueryDateFormat, $phpDateFormat, $phpDateTimeFormat)
+    {
+        self::$languageSettings = array(
+            'languages'=>$languages,
+            'jQueryDateFormat'=>$jQueryDateFormat,
+            'phpDateFormat'=>$phpDateFormat,
+            'phpDateTimeFormat'=>$phpDateTimeFormat);
+    }
+
+    public static function getLanguageSettings()
+    {
+        return self::$languageSettings;
+    }
+
+}
+ConfigClass::setDsn($dsn);
+ConfigClass::setAuthOptions($auth_options);
+ConfigClass::setLanguageSettings($languages, $jQueryDateFormat, $phpDateFormat, $phpDateTimeFormat);
+
+$application = new Application();
+
+$application->add(new ExportSeapCommand());
+$application->add(new ExportBuildingsCommand());
+
+$application->run();
