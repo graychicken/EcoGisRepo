@@ -1,0 +1,268 @@
+/* only IE6: button localit� */
+#header #toolbar #zoomToLocality{
+      *position:relative;
+      *top:-18px;
+}
+
+#header #toolbar #clearZoomToLocality{
+       *position:relative;
+       *top:-18px;
+}
+/* CSS RESET */
+*{text-decoration:none;font-size:1em;outline:none;margin:0;padding:0}code,kbd,samp,pre,tt,var,textarea,input,select,isindex,listing,xmp,plaintext{font:inherit;white-space:normal}a,img,a img,iframe,form,abbr,acronym,object,applet,table,a abbr,a acronym{border-width:0}dfn,i,cite,var,address,em{font-style:normal}th,b,strong,h1,h2,h3,h4,h5,h6,dt{font-weight:400}caption,th,td{text-align:left}html{line-height:1.3;font-family:arial, sans-serif} html{font-family:sans-serif} q{quotes:"\201C""\201D""\2018""\2019"}ul,ol,dir,menu{list-style:none}sub,sup{vertical-align:baseline}a{color:inherit}
+font,basefont{color:inherit;font:inherit;font-size:100%}center,*[align]{text-align:inherit}s,strike,u{text-decoration:inherit}img{border:none;margin:0}ol{list-style-type:decimal}body{background-color:transparent}tr,th,td{width:auto;height:auto;background-color:transparent;vertical-align:inherit;border:none}table[border],.content table[border]{border-collapse:separate;border-spacing:0}nobr{white-space:normal}marquee{overflow:visible;-moz-binding:none}blink{text-decoration:none}
+html{font-size:125%}body{font-size:50%}a{text-decoration:underline}strong,th,thead td,h1,h2,h3,h4,h5,h6,dt{font-weight:700}cite,em,dfn{font-style:italic}code,kbd,samp,pre,tt,var,input[type='text'],input[type='password'],textarea{font-size:100%;font-family:mono-space,monospace}pre{white-space:pre}pre *{font-size:100%;white-space:pre}del{text-decoration:line-through}ins,dfn{/*border-bottom:1px solid #000*/}small,sup,sub{font-size:85%}big{font-size:125%;line-height:80%}abbr,acronym{text-transform:uppercase;font-size:85%;letter-spacing:.1em}abbr[title],acronym[title],dfn[title]{cursor:help;border-bottom:1px dotted #000}sup{vertical-align:super}sub{vertical-align:sub}blockquote{padding-left:2.2em}hr{display:block;}:lang(af),:lang(nl),:lang(pl){quotes:'\201E' '\201D' '\201A' '\2019'}:lang(bg),:lang(cs),:lang(de),:lang(is),:lang(lt),:lang(sk),:lang(sr),:lang(ro){quotes:'\201E' '\201C' '\201A' '\2018'}:lang(da),:lang(hr){quotes:'\00BB' '\00AB' '\203A' '\2039'}:lang(el),:lang(es),:lang(sq),:lang(tr){quotes:'\00AB' '\00BB' '\2039' '\203A'}:lang(en-GB){quotes:'\2018' '\2019' '\201C' '\201D'}:lang(fi),:lang(sv){quotes:'\201D' '\201D' '\2019' '\2019'}:lang(fr){quotes:'\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a'}*[lang|='en'] q:before{content:'\201C'}*[lang|='en'] q:after{content:'\201D'}*[lang|='en'] q q:before{content:'\2018'}*[lang|='en'] q q:after{content:'\2019'}input,select,button{cursor:pointer}input[type='text'],input[type='password']{cursor:text}input[type='hidden']{display:none}
+table{border-collapse:collapse;border-spacing:0;}q:before,q:after,blockquote:before,blockquote:after{content:"";}
+
+/* GENERAL */
+body, html { background-color: #FFFFFF; color: #000000; margin: 0px; padding: 0px; font-family: "Verdana",sans-serif; height: 100%; width: 100%; }
+optgroup { font-style:normal; }
+optgroup option { padding-left:10px; }
+#header {
+    overflow: hidden !important;
+}
+#mainheader { margin: 5px 5px 5px 5px; }
+#mainheader img { display: block; margin: 0px; }
+#layout_container { min-height: 400px; min-width: 900px; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; padding:0px; }
+#toolbar { padding: 2px; overflow: hidden; -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-left-radius: 0px; border-bottom-left-radius: 0px; -moz-border-radius-bottomright: 0px; -webkit-border-bottom-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom: 1px solid #CCC; }
+#footer .fg-toolbar { -moz-border-radius-topleft: 0px; -webkit-border-top-left-radius: 0px; border-top-left-radius: 0px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; border-top-right-radius: 0px; border-top: none; line-height: 18px; padding-left: 4px; }
+#toolbar input#scaleDropDown { height: 20px; margin-left: 4px; }
+#footer {overflow:hidden !important; border: none !important; padding: 0 !important; }
+#mapOL {overflow:hidden !important;}
+
+/* Scroll for gisclientTree */
+.ui-layout-pane { padding: 5px !important; /*overflow: hidden !important; */}
+.ui-layout-north { border: none !important; padding: 0px !important; 
+    font-family: verdana, sanf-serif;
+}
+#outer-center { border: none !important; }
+.ui-layout-east { overflow: auto; border: none !important; padding: 0px !important; }
+.ui-layout-east li { overflow: hidden !important; white-space: nowrap; }
+.east-center { -moz-border-radius: 0px !important; -webkit-border-radius: 0px !important; border-radius: 0px !important; width: auto !important; }
+.east-center .jstree-no-icons { padding: 10px 0px !important; }
+#toolbar .ui-buttonset { overflow: hidden !important; display: block !important; float: left !important;font-size: 11px; }
+/* AL: cambiato per compatibilit� con gc_filters #toolbar .ui-button { display: block; float: left; width: 27px !important; height: 27px !important; border-collapse: collapse; margin: 0 !important; padding: 0px !important; border: 1px solid #dddddd; } */
+#toolbar .ui-button { float: left; width: 27px !important; height: 27px !important; border-collapse: collapse; margin: 0 !important; padding: 0px !important; border: 1px solid #dddddd; }
+#toolbar label.ui-button { width: 25px !important; height: 25px !important; vertical-align:bottom }
+
+/* Move up-down layers buttons */
+#treeDiv a.down , #treeDiv a.up, #treeDiv a.opacity, #treeDiv a.delete, a.gc_ui-icon-minimized { font-size: 6px !important; line-height: 18px !important; height: auto !important; padding: 0  !important; top: 0 !important; display: block; float: left; margin: 0 1px; width: 14px !important; height: 14px !important; }
+button.gc_ui-icon-minimized  .ui-button-text {padding: 0;}
+.ui-dialog-content button.gc_ui-icon-minimized {padding: 2px;}
+.jstree-no-icons li ins { line-height: 18px !important; display: block; float: left; height: 18px; }
+.jstree-no-icons li input { margin: 1px 1px !important; float: left; }
+
+/*gc_filters*/
+#gc_filters { float:right; margin-top:2px;}
+#gc_filters input[type="text"] { line-height:20px; height:20px; font-family: Verdana,Arial,sans-serif; font-weight:normal; font-size:1.1em; }
+#gc_filters a.ui-button { float: none; width: 20px !important; height: 20px !important; vertical-align:bottom;}
+#gc_filters button.ui-button { float: none; width: 22px !important; height: 22px !important;vertical-align:bottom; }
+
+/* AL: tolto perch� non si cxapisce a cosa serve e crea problemi. fieldset { padding:0; border:0; margin-top:25px; } */ /* OK -> gc.style.css */
+/*searchList*/
+#searchList{ padding: 0 px; }
+#searchList legend { padding:3px;}
+#searchList fieldset { padding:0px 5px 5px 5px; border:1px solid #999999 !important; margin-bottom:5px;}
+#searchList fieldset div { margin-bottom:5px; }
+#searchList select { display:block; width:auto; padding:2px;  }
+#searchList select.floating_select { float: left; margin-right: 7px; }
+#searchList input[type=text] { display:block; width:97%; height: 18px;  margin-bottom:7px; }
+#searchList input[type=text][size="10"] { width: 77% !important;}
+
+label.gcSearchForm{margin-left: 10px;font-weight:bold;width:300px;}
+label.gcSearchForm select{margin-right:5px;margin-left:5px;}
+.searchData{width:120px;}
+.searchLabel{width:120px;}
+span.editButton{float:right;margin-top:5px;}
+.data{width:80px;}
+.number{width:60px;}
+/* Allineamento a destra del dropdown dell'autocomplete
+        FD: Ho messo a sinistra altrimenti non si vedono i risultati dell'autocomplete nel serach form
+        Bisognerebbe mettere a destra quello delle scale e a sinistra quello del searchform
+*/
+.ui-menu-item a {text-align:left;}
+
+#scaleDropDown { width:80px; margin: 2px 0 0 0; }
+.tooptip { overflow:hidden; }
+.olPopup  { border: 1px solid !important; opacity: 0.9 !important; }
+
+/* hightlight personalizzazioni */
+/*
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight  { border: 1px solid #FF6A00 !important; background: #FFDAA8 !important; }
+*/
+
+/* ui-dialog-content - Finestre di dialogo */
+.ui-dialog-content fieldset { padding:0px; border:1px solid #999999 !important; margin:0px 0px 5px 0px ; }
+.ui-dialog-content legend { padding:3px; color:black;}
+.ui-dialog-content hr { margin: 10px 0px; border: none; border-top: 1px dashed #666666; }
+.ui-dialog-content div.noflow { -webkit-overflow: hidden; -moz-overflow: hidden; -o-overflow: hidden; }
+.ui-dialog-content label { clear: both; float: left; width: 130px; text-align: right; margin-right: 4px; line-height: 26px; }
+.ui-dialog-content input[type="text"] { width: 225px; height: 15px; line-height: 15px; margin: 2px 0px; padding: 1px; }
+.ui-dialog-content table label { clear: none; float: none; width: auto;}
+.ui-dialog-content table input { width: auto; height: auto;}
+.ui-dialog-content textarea { float: left; width: 226px; height: 40px; line-height: 15px; margin: 2px 0px; padding: 1px; }
+.ui-dialog-content input.radio , .ui-dialog-content input.checkbox { vertical-align: text-bottom; width: auto; height: auto; margin: 0px; }
+.ui-dialog-content select { float: left; width: 230px; height: 20px; line-height: 20px; margin: 2px 0px; }
+.ui-dialog-content .radio_container { /*  margin: 2px 0px; */ overflow: hidden; float:left; line-height: 18px;}
+.ui-dialog-content .radio_container label { clear: none; float: none; width: none; text-align: none; margin-right: none; line-height: none; }
+.ui-dialog-content button , .ui-dialog-contentinput.button { width: auto; padding: 4px; }
+#intersection_doc_div .ui-datepicker-trigger {padding: 0.2em !important;}
+.ui-dialog-content #editing_snap { text-align: center; }
+.ui-dialog-content #editing_snap input.checkbox { margin-right: 4px; }
+.ui-dialog-content #tollerance_container { margin: 4px 0px 10px 0px; }
+.ui-dialog-content input#redline_fontsize ,
+.ui-dialog-content input#redline_fontcolor ,
+.ui-dialog-content input#redline_linecolor ,
+.ui-dialog-content input#redline_fillcolor { width: 80px; height: 15px !important; line-height: 15px; }
+.ui-dialog-content #redline_fontsize_button { padding: 2px; }
+.ui-dialog-content #redline_text { width: 99%; height: 120px; }
+.ui-dialog-content .buttons { text-align:center; clear: both;}
+.separator_dialog_without_fieldset {height:10px;clear: both;}
+
+
+/* Rototraslazione + Taglio + editing */
+/* .ui-dialog-content div.features table { border-collapse: collapse; border: 1px solid #666666; width: 99%; margin: 4px 0px; } */
+.ui-dialog-content div.features table { border-collapse: collapse; border: 1px solid #666666; width: 100%; margin: 4px 0px; clear: both;} /* Aggiunto per problema tool ecogisDigitize */
+.ui-dialog-content div.features table td , div.features table th { border: 1px solid #666666; padding: 2px; }
+.ui-dialog-content div.features table th { background-color: #666666; color: #FFFFFF; }
+.ui-dialog-content div.features table a , .ui-dialog-content div.logs a { display: block; width: 16px; height: 16px; margin: -2px 2px -2px auto; background-repeat: no-repeat; background-position: center; float:left;}
+/* .ui-dialog-content div.features table a span , .ui-dialog-content div.logs a span { display: none; } */
+
+.ui-dialog-content div.features table a.del , .ui-dialog-content div.logs a.del { background-image: url(../images/icons/del.png); background-position: left; /* width: 60px; */ text-align: right}
+.ui-dialog-content div.features table a.highlight , .ui-dialog-content div.logs a.highlight { background-image: url(../images/icons/highlight.png);}
+.ui-dialog-content div.features table a.edit, .ui-dialog-content div.logs a.edit { background-image: url(../images/icons/edit.png);}
+.ui-dialog-content div.logs { color: #DD0000 !important; margin: 8px 8px 12px 8px; }
+.ui-dialog-content div.logs a.del { float: left; margin: 2px; }
+.ui-dialog-content div.logs span span { display: block; float: left; height: 20px; line-height: 20px; }
+.ui-dialog-content .ui-buttonset { overflow: hidden; }
+.ui-dialog-content .ui-buttonset label { clear: none; width: auto; text-align: left; }
+.ui-dialog-content div.settings { vertical-align: top; line-height: 20px; margin-top: 10px; }
+.ui-dialog-content div.settings input { width: auto; }
+
+/* tabella scroll record */
+.table-wrapper { position:relative; }
+.table-scroll { overflow:auto; margin-top:20px; }
+
+.table-wrapper table { width:100%; }
+.table-wrapper table th { color: #000000 !important; padding:0 !important; border:0; overflow:hidden;}
+.table-wrapper table th .text { position:absolute; top:-15px; z-index:2; display:block; }
+
+/* LOADING SELECTION div#loading_indicator div#errors_indicator */
+div#map_center { position: absolute; top: 50%; left: 50%; width: 1px; height: 1px; z-index: 9999; }
+div#loading_indicator { width: 200px; margin-left: -110px; margin-top: -16px; padding: 10px 10px 10px 36px; line-height: 16px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background: #DDDDDD; border: 1px solid #AAAAAA; background-image: url(../images/ajax-loader.gif); background-position: 10px 10px; background-repeat: no-repeat; }
+
+div#errors_indicator { font-size: 1.2em; border: 2px solid #c4c4c4; background-image: url(../images/icons/info_msg.png); background-repeat: no-repeat; background-position: 15px 15px; padding: 25px 15px 15px; width: 220px; text-align: center; background-color: #dddddd; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+div#errors_indicator span { margin: 20px 0px 0px; display: block;}
+div#errors_indicator button#error_handler_close {width:100% !important; margin-top: 5px; height: 30px; font-size: 1em !important;}
+
+/* AUTOCOMPLETE WITH SCROLL BARS */
+.ui-autocomplete { height: 200px; overflow-y: scroll; overflow-x: hidden;}
+
+/* Ie select width fix */
+.select-overlay { background:#fff }
+.select-overlay span { display: block; float: left; clear: both; background: transparent url(../images/bg-ie-select-width.png) no-repeat 0 0; }
+/* Overlay CSS for Internet Explorer 6 and 7 */
+.ie6 .select-overlay span, .ie7 .select-overlay span { width: 18px; height: 22px; background-position: 0 -20px; }
+.ie6 .select-overlay-hover span, .ie7 .select-overlay-hover span { background-position:-18px -20px }
+.ie6 .select-overlay-active span, .ie7 .select-overlay-active span { background-position:-18px -20px }
+/* Overlay CSS for Internet Explorer 8 with no borders or padding */
+.ie8 .select-overlay span { width: 18px; height: 22px; background-position: 0 2px; }
+.ie8 .select-overlay-hover span { background-position:-18px 2px }
+.ie8 .select-overlay-active span { background-position:-18px 2px }
+/* Overlay CSS for Internet Explorer 8 with borders and padding */
+#select-styleable-container.ie8 .select-overlay span { width: 17px; height: 20px; background-position: -36px 0; }
+#select-styleable-container.ie8 .select-overlay-hover span { background-position:-53px 0 }
+#select-styleable-container.ie8 .select-overlay-active span { background-position:-53px 0 }
+
+
+
+/* NEW LEGEND */
+.legend .theme {font-size:12px;font-weight:bold;margin-top:5px;margin-bottom:5px;}
+.legend .layer {font-size:10px;font-weight:bold;margin-top:3px;margin-bottom:3px;}
+.legend .classe {font-size:10px;font-weight:normal;margin-top:2px;margin-bottom:2px;}
+.legend .classe img {vertical-align:middle;}
+
+img.layer_loading {width: 12px; }
+
+/* correzione scrollbar tabs mappa */
+#treeDiv  {
+    overflow: hidden !important;
+}
+#treeDiv .ui-tabs-panel {
+    overflow: auto !important;
+    margin-bottom:10px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 0;
+    top: 40px;
+    left: 3px;
+    right: 0px;
+}
+
+table#view_table {
+    border-collapse:collapse;
+}
+table#view_table, table#view_table td, table#view_table th {
+    border: 1px solid black;
+    padding:2px;
+}
+table#view_table tr:hover {
+    background-color:yellow;
+}
+tr.selected_row {
+    background-color: orange;
+}
+
+/* icons search table */
+.search_results_buttons {
+    position: absolute;
+    right: 20px;
+    top: 4px;
+}
+
+input#scaleDropDown {
+    line-height:20px;
+}
+
+tr.feature_attributes_row:hover {
+    background: #ffffff;
+    cursor: pointer;
+}
+tr.feature_attributes_done {
+    background: #3dbf30;
+}
+tr.feature_attributes_todo {
+    background: #F39126;
+}
+
+/* stili che sovrascrivono la griglia ui dati */
+#dataList tr.ui-state-highlight, #dataList tr.ui-widget-content .ui-state-highlight {
+    border: 1px solid #ffe63d !important;
+    background: #fff83d !important;
+}
+
+/* stili per tool CDU */
+#intersection_doc_div label {
+    width: 100px;
+}
+#intersection_doc_div input {
+    width: auto;
+}
+
+#div_intersectiondoc div.features table {
+    width: 100%;
+}
+
+/*patch for flickering on Chrome! */
+
+.olTileImage {
+  -webkit-backface-visibility: visible !important;
+  -webkit-transform: none !important;
+  -webkit-transition: none !important;
+}
+
+.olControlPanZoomBar .olZoomBar { 
+    background-image: url('../images/icons/zoombar.png'); 
+}

@@ -1,0 +1,44 @@
+
+#help_tool img.help {
+    padding: 4px;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 3px;
+    float: left;
+}
+
+#help_tool img.help2 {
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 3px;
+    float: left;
+}
+
+#help_tool p, #help_tool h2 {
+    text-indent:10px;
+}
+
+#help_tool p {
+    margin-bottom:10px;
+}
+
+#help_tool h1 {
+    margin-bottom:10px;
+    margin-top:10px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+#help_tool span.pdf {
+    padding: 8px 8px 8px 0;
+}
+
+#help_tool img.pdf_img {
+    position: relative;
+    top: 3px;
+    margin-right: 2px;
+}
+
+#help_tool span.italic {
+    font-style: italic !important;
+}

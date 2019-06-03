@@ -1,0 +1,87 @@
+/* TODO: Check usage of this class */
+.ui-autocomplete-loading {
+    background: url(indicator.gif) no-repeat right;
+}
+
+/* Scroll for gisclientTree */
+.ui-layout-pane {
+    padding:0.3em !important;
+    overflow:hidden !important;
+}
+.ui-layout-east {
+    overflow: auto;
+}
+.ui-layout-east li {
+    overflow: hidden !important;
+    white-space: nowrap;
+}
+.ui-layout-pane-south{
+    overflow: auto !important;
+}
+
+/* Toolbar Icons */
+.gc-toolbar {
+    padding: .2em;
+    margin-top: -5px;
+}
+
+.gc-toolbar div {
+    float: left;
+
+}
+.zoom_full {
+    background-image:url(../images/icons/world.png) !important;
+}
+.zoom_in {
+    background-image:url(../images/icons/zoom_in.png) !important;
+}
+.pan {
+    background-image:url(../images/icons/pan.gif) !important;
+}
+.zoom_out {
+    background-image:url(../images/icons/zoom_out.png) !important;
+}
+.ruler {
+    background-image:url(../images/icons/ruler.png) !important;
+}
+.ruler2 {
+    background-image:url(../images/icons/ruler_square.png) !important;
+}
+.info {
+    background-image:url(../images/icons/info.png) !important;
+}
+.searchform {
+    background-image:url(../images/icons/table_go.png) !important;
+}
+.zoom_prev {
+    background-image:url(../images/icons/resultset_previous.png) !important;
+}
+.zoom_next {
+    background-image:url(../images/icons/resultset_next.png) !important;
+}
+.vector {
+    background-image:url(../images/icons/vector.png) !important;
+}
+.vector_add {
+    background-image:url(../images/icons/vector_add.png) !important;
+}
+.vector_delete {
+    background-image:url(../images/icons/vector_delete.png) !important;
+}
+.select_box {
+    background-image:url(../images/icons/select-box.png) !important;
+}
+.select_polygon {
+    background-image:url(../images/icons/select-polygon.png) !important;
+}
+.select_circle {
+    background-image:url(../images/icons/select-circle.png) !important;
+}
+.select_area {
+    background-image:url(../images/icons/select-area.png) !important;
+}
+.edit_feature {
+    background-image:url(../images/icons/vector.png) !important;
+}
+
+

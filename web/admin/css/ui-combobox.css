@@ -1,0 +1,7 @@
+.ui-combobox {list-style:none;padding:0px;margin:0px;}
+.ui-combobox .ui-combobox-toggleText {height:19px;overflow:hidden;}
+.ui-combobox li {margin: 0px;padding: 5px 5px 5px 5px;position: relative;cursor:pointer;}
+.ui-combobox li a{padding: 0px;margin:0px;display: block;text-decoration: none;width:90%; outline:transparent solid 0px;}
+
+.ui-combobox li .ui-icon {padding:0px;margin:-20px 0px 0px 0px;width:17px;height:17px;float:right;}
+.ui-combobox-list { border-width:1px !important;position:absolute;padding:0px;list-style-type:none;margin:0px;display:none; float:left;overflow:auto;left:-1px;  }

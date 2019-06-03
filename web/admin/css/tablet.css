@@ -1,0 +1,155 @@
+/* Sovrascrivono gli stili per il mobile */
+
+html{font-size:125%}body{font-size:50%}a{text-decoration:underline}strong,th,thead td,h1,h2,h3,h4,h5,h6,dt{font-weight:700}cite,em,dfn{font-style:italic}code,kbd,samp,pre,tt,var,input[type='text'],input[type='password'],textarea{height: 20px; font-size:100%;font-family:mono-space,monospace}pre{white-space:pre}pre *{font-size:100%;white-space:pre}del{text-decoration:line-through}ins,dfn{/*border-bottom:1px solid #000*/}small,sup,sub{font-size:85%}big{font-size:125%;line-height:80%}abbr,acronym{text-transform:uppercase;font-size:85%;letter-spacing:.1em}abbr[title],acronym[title],dfn[title]{cursor:help;border-bottom:1px dotted #000}sup{vertical-align:super}sub{vertical-align:sub}blockquote{padding-left:2.2em}hr{display:block;}:lang(af),:lang(nl),:lang(pl){quotes:'\201E' '\201D' '\201A' '\2019'}:lang(bg),:lang(cs),:lang(de),:lang(is),:lang(lt),:lang(sk),:lang(sr),:lang(ro){quotes:'\201E' '\201C' '\201A' '\2018'}:lang(da),:lang(hr){quotes:'\00BB' '\00AB' '\203A' '\2039'}:lang(el),:lang(es),:lang(sq),:lang(tr){quotes:'\00AB' '\00BB' '\2039' '\203A'}:lang(en-GB){quotes:'\2018' '\2019' '\201C' '\201D'}:lang(fi),:lang(sv){quotes:'\201D' '\201D' '\2019' '\2019'}:lang(fr){quotes:'\ab\2005' '\2005\bb' '\2039\2005' '\2005\203a'}*[lang|='en'] q:before{content:'\201C'}*[lang|='en'] q:after{content:'\201D'}*[lang|='en'] q q:before{content:'\2018'}*[lang|='en'] q q:after{content:'\2019'}input,select,button{cursor:pointer; height: 20px;}input[type='text'],input[type='password']{cursor:text; height: 25px;}input[type='hidden']{display:none}
+select{height: 25px}
+
+/* GENERAL */
+input[type=checkbox] {width: 28px;}
+body, html { background-color: #FFFFFF; color: #000000; margin: 0px; padding: 0px; font-family: "Verdana",sans-serif; height: 100%; width: 100%; font-size: 13px}
+#toolbar { padding: 4px 2px 2px 2px; overflow: hidden; -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-left-radius: 0px; border-bottom-left-radius: 0px; -moz-border-radius-bottomright: 0px; -webkit-border-bottom-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom: 1px solid #CCC; }
+#footer .fg-toolbar { -moz-border-radius-topleft: 0px; -webkit-border-top-left-radius: 0px; border-top-left-radius: 0px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; border-top-right-radius: 0px; border-top: none; line-height: 24px; padding-left: 4px; height: 24px;}
+#toolbar input#scaleDropDown { height: 25px; margin-left: 4px; margin-top: 5px;}
+
+
+#toolbar .ui-button { float: left; width: 40px !important; height: 40px !important; border-collapse: collapse; margin: 0 3px 0 3px !important; padding: 0px !important; border: 1px solid #dddddd; }
+#toolbar label.ui-button { width: 38px !important; height: 38px !important; vertical-align:bottom }
+
+/* Move up-down layers buttons */
+#treeDiv a.down , #treeDiv a.up, #treeDiv a.opacity, #treeDiv a.delete, a.gc_ui-icon-minimized { font-size: 6px !important; line-height: 18px !important; height: auto !important; padding: 0  !important; top: 0 !important; display: block; float: left; margin: 0 1px; width: 20px !important; height: 20px !important; }
+.jstree-no-icons li ins { line-height: 18px !important; display: block; float: left; height: 18px; margin-right: 8px; margin-top: 1px;}
+
+
+
+#scaleDropDown { width:90px; margin: 2px 0 0 0; }
+
+#button_searchForm, #searchForm_submit {
+    height: 30px;
+    padding: 0 10px 0 10px;
+}
+
+.jstree-no-icons li input {
+    margin: 1px 5px 1px 0px!important;
+}
+
+#treeList ul li ul > li:first-child ins.jstree-icon{margin-left: 0px;}
+#treeList ul li ul > li:first-child{margin-top: 8px;}
+
+li.jstree-leaf {
+    margin-bottom: 8px !important;
+}
+
+.jstree > ul > li {
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+/*  div nascosti*/
+
+#mapInfoMousePosition{
+    display: none;
+}
+
+/* layout */
+
+#sidebarSx-toggler {
+    width: 20px !important;
+}
+
+.ui-layout-resizer-east {
+    z-index: 2 !important;
+}
+
+/*.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    height: 45px !important;
+}*/
+
+.ui-widget-content .ui-row-ltr {
+    height: 45px !important;
+}
+
+.search_results_buttons{
+    display: none !important;
+}
+
+#zoomReferenceMap {
+    display: none;
+}
+
+#layout_container {
+    min-width: auto !important;
+}
+
+#layout_container #header {
+    background-color: rgb(206, 206, 206) !important;
+}
+
+/* immagine mappa statica */
+
+#referenceMap {
+    background-image: url(../images/tablet_ref_map.png) !important;
+}
+
+
+/* serve solo a nascondere l'immagine ref che non c'è */
+
+.image_tablet_ref_map {
+    border: 1px solid black;
+}
+
+#OpenLayersDiv96 {
+    visibility: hidden;
+}
+
+/* Map icons table */
+.ui-button .zoom_full { background-image: url(../images/icons/zoom_extension.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .zoom_prev { background-image: url(../images/icons/prev.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .zoom_next { background-image: url(../images/icons/next.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .pan { background-image: url(../images/icons/pan.gif) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .zoom_in { background-image: url(../images/icons/zoom_in_2.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .zoom_out { background-image: url(../images/icons/zoom_out_2.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .ruler { background-image: url(../images/icons/ruler.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .ruler2 { background-image: url(../images/icons/ruler_square.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .info { background-image: url(../images/icons/info.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .select_box { background-image: url(../images/icons/select-box.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .draw_feature { background-image: url(../images/icons/vector.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .reload { background-image: url(../images/icons/reload.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .redline { background-image: url(../images/icons/redline.gif) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .tooltip { background-image: url(../images/icons/tooltip.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .select_point { background-image: url(../images/icons/select-point.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .select_box { background-image: url(../images/icons/select-box.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .print { background-image: url(../images/icons/print.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .select_features { background-image: url(../images/icons/select-features.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .rototraslazione { background-image: url(../images/icons/rototraslazione.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .request_parcel_owner { background-image: url(../images/icons/request_parcel_owner.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .tagliaDbTopo { background-image: url(../images/icons/cut.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .exportKml { background-image: url(../images/icons/google_earth.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .toStreetView { background-image: url(../images/icons/street_view.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .linkCatastoDbTopo { background-image: url(../images/icons/link_catasto_dbtopo.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .dialogToPopup { background-image: url(../images/icons/open_big_map.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .select { background-image: url(../images/icons/select.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .select-callback { background-image: url(../images/icons/select-callback.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .delCatasto { background-image: url(../images/icons/remove_parcels.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .intersectPolygonWithFeature { background-image: url(../images/icons/add_new_job_with_polygon_intersection.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .edit_feature { background-image: url(../images/icons/edit_features.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .wfst_edit { background-image: url(../images/icons/wfst_edit.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .mapContext { background-image: url(../images/icons/map-context.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .download_map { background-image: url(../images/icons/download-map.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .map_help { background-image: url(../images/icons/map_help.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .geolocate { background-image: url(../images/icons/geolocate.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .exportDbt { background-image: url(../images/icons/dbt-export.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .insertHail { background-image: url(../images/icons/add_new_hail.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .viewHails { background-image: url(../images/icons/show_hail.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .notifyError { background-image: url(../images/icons/notify_error.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .createGreenObject { background-image: url(../images/icons/create_green_object.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .featureAttributes {background-image: url(../images/icons/feature_attributes.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .ecogisDigitize {background-image: url(../images/icons/ecogisDigitize.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .cdu {background-image: url(../images/icons/intersection_doc.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+
+.ui-button .insert_tree {background-image: url(../images/icons/insert_tree.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-button .edit_tree {background-image: url(../images/icons/edit_tree.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px;}
+.ui-icon-search {background-image: url(../images/icons/search.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px; background-position: 0 !important;}
+.ui-icon-cancel {background-image: url(../images/icons/cancel.png) !important; width: 25px !important; height: 25px !important; left: 16px !important; top: 17px !important; background-size: 23px 23px; background-position: 0 !important;}
+
+#toolbar input#di_name {
+    height: 32px;
+}

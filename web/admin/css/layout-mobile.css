@@ -1,0 +1,29 @@
+#toolbar input#di_name { margin: 5px; float: left; height: 25px; }
+
+
+#header{
+	top: 0;
+	height: 48px;
+	position: absolute;
+	width: 100%;
+}
+
+#mapOL{
+	top: 48px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 25px;
+}
+
+#footer{
+	height: 25px;
+	position: absolute;
+	width: 100%;
+	bottom:0;
+}
+
+div.olControlAttribution {
+    bottom: 0;
+}
+

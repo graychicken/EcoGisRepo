@@ -1,0 +1,119 @@
+body {
+	font-family:tahoma,sans,helvetica;
+	font-size:12px;
+}
+
+.ui-layout-north,
+.ui-layout-center,
+.ui-layout-east,
+.ui-layout-west,
+.ui-layout-south {
+	padding:0px !important;
+	overflow:hidden !important;
+}
+
+/*
+ * Sovrascrive lo stile zoombox
+ */
+
+.olHandlerBoxZoomBox {
+    border: 3px solid #F60 !important;
+    position: absolute !important;
+    background-color: white !important;
+    opacity: 0.50 !important;
+    font-size: 1px !important;
+    filter: alpha(opacity=50) !important;
+}
+
+/*
+ * Sovrascrive lo stile delle coordinate
+ */
+.olControlMousePosition {
+    font-family: Verdana;
+    font-size: 1.5em;
+    color: white;
+	background-color: #AAAAAA;
+}
+/*
+ * Sovrascrive lo stile dello storico di navigazione
+ */
+.olControlNavigationHistory  {
+	background-image:none !important;
+	background-repeat:no-repeat;
+	height:14px !important;
+	width:14px !important;
+}
+
+.olControlNavigationHistoryPreviousItemActive { 
+	background-image:url(../images/icons/navigation_history_active_prev.png) !important;
+  	background-position: -1px 0px !important;
+}
+.olControlNavigationHistoryPreviousItemInactive { 
+   	background-image:url(../images/icons/navigation_history_inactive_prev.png) !important;
+	background-position: -1px 0px !important;
+}
+.olControlNavigationHistoryNextItemActive { 
+	background-image:url(../images/icons/navigation_history_active_next.png) !important;
+   	background-position: -1px 0px !important;
+}
+.olControlNavigationHistoryNextItemInactive { 
+	background-image:url(../images/icons/navigation_history_inactive_next.png) !important;
+   	background-position: -1px 0px !important;
+}
+
+/*
+ * Sovrasrive lo stile di copyright
+ */
+.olControlAttribution {
+    bottom: 0.5em !important;
+}
+
+
+/*
+ * Icone toolbar
+ */
+
+.zoom_full {background-image:url(../images/icons/world.png) !important;}
+.zoom_in {background-image:url(../images/icons/zoom_in.png) !important;}
+.pan {background-image:url(../images/icons/pan.gif) !important;}
+.zoom_out {background-image:url(../images/icons/zoom_out.png) !important;}
+.ruler {background-image:url(../images/icons/ruler.png) !important;}
+.ruler2 {background-image:url(../images/icons/ruler_square.png) !important;}
+.info {background-image:url(../images/icons/info.png) !important;}
+.searchform {background-image:url(../images/icons/table_go.png) !important;}
+.zoom_prev {background-image:url(../images/icons/resultset_previous.png) !important;}
+.zoom_next {background-image:url(../images/icons/resultset_next.png) !important;}
+.vector {background-image:url(../images/icons/vector.png) !important;}
+.vector_add {background-image:url(../images/icons/vector_add.png) !important;}
+.vector_delete {background-image:url(../images/icons/vector_delete.png) !important;}
+.select_box {background-image:url(../images/icons/select-box.png) !important;}
+.select_polygon {background-image:url(../images/icons/select-polygon.png) !important;}
+.select_circle {background-image:url(../images/icons/select-circle.png) !important;}
+.select_area {background-image:url(../images/icons/select-area.png) !important;}
+.map_test {background-image:url(../images/icons/map.png) !important;}
+/*
+ * Toolbar e bottoni
+ */
+.fg-button { outline: 0; margin:0 4px 0 0; padding: .4em 1em; text-decoration:none !important; cursor:pointer; position: relative; text-align: center; zoom: 1; }
+.fg-button .ui-icon { position: absolute; top: 50%; margin-top: -8px; left: 50%; margin-left: -8px; }
+			
+a.fg-button { float:left; }
+			
+/* remove extra button width in IE */
+button.fg-button { width:auto; overflow:visible; }
+			
+.fg-button-icon-left { padding-left: 2.1em; }
+.fg-button-icon-right { padding-right: 2.1em; }
+.fg-button-icon-left .ui-icon { right: auto; left: .2em; margin-left: 0; }
+.fg-button-icon-right .ui-icon { left: auto; right: .2em; margin-left: 0; }
+			
+.fg-button-icon-solo { display:block; width:8px; text-indent: -9999px; }	 /* solo icon buttons must have block properties for the text-indent to work */	
+			
+.fg-buttonset { float:left; }
+.fg-buttonset .fg-button { float: left; }
+.fg-buttonset-single .fg-button, 
+.fg-buttonset-multi .fg-button { margin-right: -1px;}
+			
+.fg-toolbar { padding: .1em; margin-top: -5px; margin-left:-5px }
+.fg-toolbar .fg-buttonset { margin-right:1.5em; padding-left: 1px; }
+.fg-toolbar .fg-button { font-size: 1em;  }

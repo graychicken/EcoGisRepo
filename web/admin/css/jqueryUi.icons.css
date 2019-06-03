@@ -1,0 +1,47 @@
+.ui-button .zoom_full { background-image: url(../images/icons/zoom_extension.png) !important; }
+.ui-button .zoom_prev { background-image: url(../images/icons/prev.png) !important; }
+.ui-button .zoom_next { background-image: url(../images/icons/next.png) !important; }
+.ui-button .pan { background-image: url(../images/icons/pan.gif) !important; }
+.ui-button .zoom_in { background-image: url(../images/icons/zoom_in_2.png) !important; }
+.ui-button .zoom_out { background-image: url(../images/icons/zoom_out_2.png) !important; }
+.ui-button .ruler { background-image: url(../images/icons/ruler.png) !important; }
+.ui-button .ruler2 { background-image: url(../images/icons/ruler_square.png) !important; }
+.ui-button .info { background-image: url(../images/icons/info.png) !important; }
+.ui-button .select_box { background-image: url(../images/icons/select-box.png) !important; }
+.ui-button .draw_feature { background-image: url(../images/icons/vector.png) !important; }
+.ui-button .reload { background-image: url(../images/icons/reload.png) !important; }
+.ui-button .redline { background-image: url(../images/icons/redline.gif) !important; }
+.ui-button .tooltip { background-image: url(../images/icons/tooltip.png) !important; }
+.ui-button .select_point { background-image: url(../images/icons/select-point.png) !important; }
+.ui-button .select_box { background-image: url(../images/icons/select-box.png) !important; }
+.ui-button .print { background-image: url(../images/icons/print.png) !important; }
+.ui-button .select_features { background-image: url(../images/icons/select-features.png) !important; }
+.ui-button .unselect_features {background-image: url(../images/icons/unselect_features.png) !important; }
+.ui-button .rototraslazione { background-image: url(../images/icons/rototraslazione.png) !important; }
+.ui-button .request_parcel_owner { background-image: url(../images/icons/request_parcel_owner.png) !important; }
+.ui-button .tagliaDbTopo { background-image: url(../images/icons/cut.png) !important; }
+.ui-button .exportKml { background-image: url(../images/icons/google_earth.png) !important; }
+.ui-button .toStreetView { background-image: url(../images/icons/street_view.png) !important; }
+.ui-button .linkCatastoDbTopo { background-image: url(../images/icons/link_catasto_dbtopo.png) !important; }
+.ui-button .dialogToPopup { background-image: url(../images/icons/open_big_map.png) !important; }
+.ui-button .select { background-image: url(../images/icons/select.png) !important; }
+.ui-button .select-callback { background-image: url(../images/icons/select-callback.png) !important; }
+.ui-button .delCatasto { background-image: url(../images/icons/remove_parcels.png) !important; }
+.ui-button .intersectPolygonWithFeature { background-image: url(../images/icons/add_new_job_with_polygon_intersection.png) !important; }
+.ui-button .edit_feature { background-image: url(../images/icons/edit_features.png) !important; }
+.ui-button .wfst_edit { background-image: url(../images/icons/wfst_edit.png) !important; }
+.ui-button .mapContext { background-image: url(../images/icons/map-context.png) !important; }
+.ui-button .download_map { background-image: url(../images/icons/download-map.png) !important; }
+.ui-button .map_help { background-image: url(../images/icons/map_help.png) !important; }
+.ui-button .geolocate { background-image: url(../images/icons/geolocate.png) !important; }
+.ui-button .exportDbt { background-image: url(../images/icons/dbt-export.png) !important; }
+.ui-button .insertHail { background-image: url(../images/icons/add_new_hail.png) !important; }
+.ui-button .viewHails { background-image: url(../images/icons/show_hail.png) !important; }
+.ui-button .notifyError { background-image: url(../images/icons/notify_error.png) !important; }
+.ui-button .createGreenObject { background-image: url(../images/icons/create_green_object.png) !important; }
+.ui-button .featureAttributes {background-image: url(../images/icons/feature_attributes.png) !important; }
+.ui-button .ecogisDigitize {background-image: url(../images/icons/ecogisDigitize.png) !important; }
+.ui-button .cdu {background-image: url(../images/icons/intersection_doc.png) !important; }
+.ui-button .insert_tree {background-image: url(../images/icons/insert_tree.png) !important; }
+.ui-button .edit_tree {background-image: url(../images/icons/edit_tree.png) !important; }
+.ui-button .edit_sign {background-image: url(../images/icons/edit_sign.png) !important; }
