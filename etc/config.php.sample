@@ -1,0 +1,320 @@
+<?php
+
+/**
+ * Main configuration file 
+ *
+ * Include the customer configuration file
+ *
+ */
+/* ------------------------------ DB Settings ------------------------------ */
+
+$dsn = array('dbtype' => 'pgsql',
+    'dbhost' => '127.0.0.1', // host
+    'dbuser' => 'ecogis', // login
+    'dbpass' => 'ecogis', // Password
+    'dbname' => 'ecogis', // database
+    'persistent' => false, // Persistent connection
+    'charset' => 'UTF-8', // Charset to use
+    'search_path' => 'ecogis');
+
+
+/* ------------------------------ Basic Parameters -------------------------- */
+
+define('R3_IS_MULTIDOMAIN', false);                  // MULTI DOMAIN CONFIGURATION
+define('APPLICATION_CODE', 'ECOGIS2');
+define('DEFAULT_DOMAIN', 'DEMO');                    // Default domain if no @ given
+define('DOMAIN_NAME', 'DEMO');
+
+// - Static Paths
+define('R3_APP_ROOT', substr(dirname(__FILE__), 0, -3));
+define('R3_CONFIG_DIR', R3_APP_ROOT . 'etc/');
+define('R3_LIB_DIR', R3_APP_ROOT . 'lib/');
+define('R3_LOG_DIR', R3_APP_ROOT . 'log/');
+define('R3_CLASS_DIR', R3_APP_ROOT . 'class/');
+define('R3_STAT_CLASS_DIR', R3_APP_ROOT . 'class/stat/');
+define('R3_LOOKUP_DIR', R3_CLASS_DIR . 'lookup/');
+define('R3_LANG_DIR', R3_APP_ROOT . 'lang/');
+define('R3_TMP_DIR', R3_APP_ROOT . 'tmp/');
+define('R3_WEB_DIR', R3_APP_ROOT . 'web/');
+define('R3_WEB_ADMIN_DIR', R3_WEB_DIR . 'admin/');
+define('R3_WEB_IMAGES_DIR', R3_WEB_DIR . 'images/');
+define('R3_WEB_STYLES_DIR', R3_WEB_DIR . 'style/');
+define('R3_CACHE_DIR', R3_APP_ROOT . 'cache/');
+define('R3_WEB_JS_DIR', R3_WEB_DIR . 'javascript/');
+define('R3_WEB_CSS_DIR', R3_WEB_DIR . 'style/');
+define('R3_UPLOAD_DIR', R3_APP_ROOT . 'upload/');
+define('R3_UPLOAD_DATA_DIR', R3_UPLOAD_DIR . 'data/');
+
+define('R3_IMPORT_SCHEMA', 'impexp');
+
+define('R3_AUTO_POPULATE_GEOMETRY_COLUMNS', false);  // If true the geometry columns and srid are populated on customer save
+define('R3_AUTO_SAVE_DATABASE_VERSION', false);  // If true the geometry columns and srid are populated on customer save
+
+define('R3_SINGLE_JS', true);  // If true use a single JS file
+
+define('R3_UM_JQUERY', true);
+//define('R3_EZC_DIR', '/usr/share/pear/ezc');
+//define('R3_PHPEXCEL_DIR', '/usr/share/pear/PHPExcel');
+//define('R3_PHPEXCEL_DIR', R3_LIB_DIR . '/PHPExcel/PHPExcel');
+//echo R3_PHPEXCEL_DIR;
+
+define("CACHE_DIR_LIMIT", 1000);      // Numero massimo di file nella cache
+define("CACHE_MASK", '%08d');         // Maschera da usare per la cache
+define("CACHE_EXT", '.png');          // Estensione per la cache
+// - Static URL's
+if (isset($_SERVER['SERVER_NAME'])) {
+    if ((isset($_SERVER['HTTPS']) && (strtoupper($_SERVER['HTTPS']) == 'ON' || $_SERVER['HTTPS'] == 1)) || $_SERVER['SERVER_PORT'] == '443') {
+        define('R3_DOMAIN_URL', 'https://' . $_SERVER['SERVER_NAME'] . '/');
+    } else {
+        define('R3_DOMAIN_URL', 'http://' . ($_SERVER['SERVER_PORT'] == '80' ? $_SERVER['SERVER_NAME'] : $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT']) . '/');
+    }
+    define('R3_APP_URL', R3_DOMAIN_URL . "");   // online should be empty (not /)
+    define('R3_ADMIN_URL', R3_APP_URL . "admin/");
+    define('R3_MAP_URL', R3_APP_URL . "map/");
+    define('R3_CACHE_URL', R3_APP_URL . "cache/");
+    define('R3_JS_URL', R3_APP_URL . "javascript/");
+    define('R3_CSS_URL', R3_APP_URL . "style/");
+    define('R3_IMAGES_URL', R3_APP_URL . "images/");
+    define('R3_ICONS_URL', R3_APP_URL . "images/icons/");
+    define('R3_REST_URL', R3_APP_URL . "rest/");
+} else {
+    define('R3_APP_URL', '');
+    define('R3_IMAGES_URL', '');
+}
+
+define('R3_FOP_CMD', '/usr/local/fop/fop');
+define('GZIP_PHP_PAGE', false);
+
+
+/* ------------------------------ Error manager ------------------------------ */
+
+define('R3_ERROR_SCREEN', true);
+define('R3_ERROR_SCREEN_BACKTRACE', true);
+define('R3_ERROR_SYSLOG', false);
+define('R3_ERROR_ERRLOG', true);
+define('R3_ERROR_MAIL', false);
+define('R3_ERROR_MAIL_ADDR', '');
+define('R3_ERROR_MAX_EMAIL', 10);
+require_once R3_LIB_DIR . 'r3error.php';
+
+
+/* ------------------------------ Charset Settings ------------------------------ */
+
+define('R3_APP_CHARSET', 'UTF-8');
+define('R3_APP_CHARSET_DB', 'UTF-8');
+
+
+/* ------------------------------ Simpletable Settings ------------------------------ */
+
+define('R3SIMPLETABLE_VERSION_SUPPORT', '1.1.7');
+
+
+/* ------------------------------ Build version ----------------------------- */
+
+define('BUILD', 'build-' . '0001');
+
+
+/* ------------------------------ Smarty Settings ------------------------------ */
+
+//define('R3_SMARTY_ROOT_DIR', '/usr/share/php/Smarty/');
+define('R3_SMARTY_TEMPLATE_DIR', R3_APP_ROOT . 'templates/');
+define('R3_SMARTY_TEMPLATE_C_DIR', R3_APP_ROOT . 'templates_c/');
+define('R3_SMARTY_TEMPLATE_DIR_ADMIN', R3_SMARTY_TEMPLATE_DIR . 'admin/');
+define('R3_SMARTY_TEMPLATE_C_DIR_ADMIN', R3_SMARTY_TEMPLATE_C_DIR . 'admin/');
+define('R3_SMARTY_TEMPLATE_DIR_PUBLIC', R3_SMARTY_TEMPLATE_DIR . 'public/');
+define('R3_SMARTY_TEMPLATE_C_DIR_PUBLIC', R3_SMARTY_TEMPLATE_C_DIR . 'public/');
+define('R3_SMARTY_TEMPLATE_DIR_MAP', R3_SMARTY_TEMPLATE_DIR . 'map/');
+define('R3_SMARTY_TEMPLATE_C_DIR_MAP', R3_SMARTY_TEMPLATE_C_DIR . 'map/');
+define('R3_SMARTY_TEMPLATE_DIR_XML', R3_SMARTY_TEMPLATE_DIR . 'xml/');
+define('R3_SMARTY_TEMPLATE_C_DIR_XML', R3_SMARTY_TEMPLATE_C_DIR . 'xml/');
+define('R3_SMARTY_TEMPLATE_DIR_DOC', R3_SMARTY_TEMPLATE_DIR . 'doc/');
+define('R3_SMARTY_TEMPLATE_C_DIR_DOC', R3_SMARTY_TEMPLATE_C_DIR . 'doc/');
+define('R3_SMARTY_TEMPLATE_DIR_HELP', R3_SMARTY_TEMPLATE_DIR . 'help/');
+define('R3_SMARTY_TEMPLATE_DIR_EMAIL', R3_SMARTY_TEMPLATE_DIR . 'email/');
+define('R3_SMARTY_TEMPLATE_C_DIR_EMAIL', R3_SMARTY_TEMPLATE_C_DIR . 'email/');
+//define('R3_SMARTY_PLUGIN_DIR', '/data/sites/r3-common/smarty/plugins/');
+
+define('R3_DB_SCHEMA', 'ecogis');
+define('R3_COMMON_SCHEMA', 'common');
+define('R3_EXPORT_SCHEMA', 'impexp');
+define('R3_TEMPORARY_FILE_TTL', 24 * 60 * 60);
+
+$languages = array(1 => 'it', 2 => 'de');
+$jQueryDateFormat = array('it' => 'dd/mm/yy', 'de' => 'dd.mm.yy');
+$phpDateFormat = array('it' => 'd/m/Y', 'de' => 'd.m.Y');
+$phpDateTimeFormat = array('it' => 'd/m/Y H:i:s', 'de' => 'd.m.Y H:i:s');
+
+/* ------------------------------ GisClient ------------------------------------- */
+if (defined('R3_APP_URL')) {
+    define('GISCLIENT', true);
+    define('GC_PRINT_TPL_DIR', R3_APP_ROOT . 'web/admin/gisclient/');
+    define('GC_MODULES_URL', R3_APP_URL . 'admin/gisclient_modules/');
+    define('GC_PREVIEWMAP_SLD_FOLDER_URL', R3_APP_URL . 'sld/');
+    define('GC_PREVIEWMAP_SLD_FOLDER_DIR', R3_APP_ROOT . 'web/sld/');
+    define('GC_PREVIEWMAP_AUTO_SLD_FOLDER_URL', R3_APP_URL . 'cache/mappreview/sld/');
+    define('GC_PREVIEWMAP_AUTO_SLD_FOLDER_DIR', R3_APP_ROOT . 'web/cache/mappreview/sld/');
+    define('R3_WEB_TMP_URL', R3_APP_URL . 'cache/print/'); // print tmp
+    define('R3_WEB_TMP_DIR', R3_APP_ROOT . 'web/cache/print/'); // print tmp
+}
+
+define('GC_PREVIEW_MAP_LAYERGROUP_LIST', null);
+
+$auth_options = array('settings_table' => 'auth.settings',
+    'applications_table' => 'auth.applications',
+    'users_groups_table' => 'auth.users_groups',
+    'users_table' => 'auth.users',
+    'domains_table' => 'auth.domains',
+    'application_code' => APPLICATION_CODE,
+    'groups_table' => 'auth.groups',
+    'groups_acl_table' => 'auth.groups_acl',
+    'users_acl_table' => 'auth.users_acl',
+    'users_ip_table' => 'auth.users_ip',
+    'domains_applications_table' => 'auth.domains_applications',
+    'domains_name_table' => 'auth.domains_name',
+    'acnames_table' => 'auth.acnames',
+    'log_table' => 'auth.logs',
+    'table' => 'auth.users',
+    'usernamecol' => 'us_login',
+    'passwordcol' => 'us_password',
+    'cryptType' => 'md5',
+    'auto_quote' => false,
+    'db_where' => '1=1',
+    'enable_logging' => true,
+    'access_log_lifetime' => -1,
+    'login_log_lifetime' => -1,
+    'update_status_skip_time' => 5 * 60,
+    'debug' => false,
+    'result_buffering' => false
+);
+
+
+
+/* ------------------------------ Session Settings ------------------------------ */
+
+$sessionOpt = array('name' => APPLICATION_CODE,
+    'timeout' => 24 * 60 * 60,
+    'warning_timeout' => 24 * 60 * 60 - 120,
+    'cookie_path' => '/');
+
+require_once R3_LIB_DIR . 'r3locale.php';
+if (!isset($autoinit) || $autoinit == true) {
+    require_once R3_LIB_DIR . 'eco_app.php';
+    if (!isset($isUserManager))
+        $isUserManager = false;
+    R3AppInit('admin', array('auth' => !$isUserManager, 'auth_manager' => true, 'dbini' => true));
+}
+$framesetReload = (isset($isUserManager) && $isUserManager === true);
+
+
+/**
+ * xCSS config
+ */
+$xcssConfig = array(
+    'path_to_css_dir' => R3_WEB_CSS_DIR,
+    'compress_output_to_master' => true,
+    'minify_output' => true,
+    'xCSS_files' => array(
+        'vars.xcss' => 'vars.css',
+        'simpletable.xcss' => 'simpletable.css',
+        'default.xcss' => 'default.css',
+        'menu.xcss' => 'menu.css',
+        'ui.all.xcss' => 'ui.all.css',
+    ),
+    'reset_files' => array(),
+    'hook_files' => array()
+);
+
+
+$jsPacker = array(
+    //'minify_output'=>false,
+    'files' => array('jquery.all.js' =>
+        array('jquery/jquery.js',
+            'jquery/jquery-ui/jquery-ui.js',
+            'jquery/plugins/jquery.form.js',
+            'jquery/plugins/jquery.MultiFile.js',
+            'jquery/plugins/jquery.printElement.js'),
+        'jquery.all.i18n.<LANG>.js' =>
+        array('jquery/jquery-ui/i18n/jquery.ui.datepicker-<LANG>.js'),
+        'ecogis2_core.all.js' =>
+        array('jscore/r3.core.js',
+            'jscore/r3.form.js',
+            'jscore/r3.print.js',
+            'jscore/r3.help.js',
+            'jscore/r3.inputnumber.js',
+            'jscore/r3.previewmap.js',
+            'jscore/r3.thumbnail.js'
+        ),
+        'gisclient_part1.all.js' =>
+        array('../admin/gisclient/js/PanZoomBar.js',
+            '../admin/gisclient/external/proj4js/proj4.js'
+        ),
+        'gisclient_part1.all.i18n.<LANG>.js' =>
+        array('../admin/gisclient/languages/lang-<LANG>.js'),
+        'gisclient_part2.all.js' =>
+        array('../admin/gisclient/js/widgetGisClient.js',
+            '../admin/gisclient/js/searchEngine.js',
+            '../admin/gisclient/js/gcTool.js',
+            '../admin/gisclient/js/gcTool/zoomToMaxExtent.js',
+            '../admin/gisclient/js/gcTool/zoomToHistoryPrevious.js',
+            '../admin/gisclient/js/gcTool/zoomToHistoryNext.js',
+            '../admin/gisclient/js/gcTool/pan.js',
+            '../admin/gisclient/js/gcTool/zoomIn.js',
+            '../admin/gisclient/js/gcTool/zoomOut.js',
+            '../admin/gisclient/js/gcTool/measureLine.js',
+            '../admin/gisclient/js/gcTool/measureArea.js',
+            '../admin/gisclient/js/gcTool/drawFeature.js',
+            '../admin/gisclient/js/gcTool/reloadLayers.js',
+            '../admin/gisclient/js/gcTool/redline.js',
+            '../admin/gisclient/js/gcTool/toolTip.js',
+            '../admin/gisclient/js/gcTool/mapPrint.js',
+            '../admin/gisclient/js/gcTool/selectBox.js',
+            '../admin/gisclient/js/gcTool/selectPoint.js',
+            '../admin/gisclient/js/gcTool/selectFeatures.js',
+            '../admin/gisclient/js/searchEngine.js',
+            '../admin/gisclient/js/gcComponent.js',
+            '../admin/gisclient/js/gcComponent/gcLayersManager.js',
+            '../admin/gisclient/js/gcComponent/gcLayerTree.js',
+            '../admin/gisclient/js/gcComponent/gcLegendTree.js',
+            '../admin/gisclient/js/gcComponent/mapInfo.js',
+            '../admin/gisclient/js/gcComponent/snapPoint.js',
+            '../admin/gisclient/js/gcComponent/referenceMap.js',
+            '../admin/gisclient/js/gcComponent/scaleDropDown.js',
+            '../admin/gisclient/js/gcComponent/mapImageDialog.js',
+            '../admin/gisclient/js/gcComponent/searchForm.js',
+            '../admin/gisclient/js/gcComponent/layerTools.js',
+            '../admin/gisclient/js/gcComponent/customSearch.js',
+            '../admin/gisclient/js/gcComponent/errorHandler.js',
+            '../admin/gisclient/js/gcComponent/loadingHandler.js',
+            '../admin/gisclient/js/gcComponent/customSearch.js',
+            '../admin/gisclient_modules/dialogToPopup/dialogToPopup.js',
+            '../admin/gisclient/js/gcComponent/contextHandler.js',
+            '../admin/gisclient/external/jstree/jquery.jstree.min.js',
+            '../admin/gisclient/external/plugin-jquery/jquery.maxzindex.js'        
+        ),
+    ),
+    'JS_files' => array('framework.js', 'eco_app.js', 'eco_utils.js', 'menu.js', 'r3_help.js', 'openfunc.js', 'mapopenfunc.js', 'jquery_extend.js', /* 'simpletable.js', */
+        'action_catalog.js', 'building.js', 'consumption.js', 'consumption_tree.js', 'customer.js', 'device.js', 'document.js',
+        'energy_source_udm.js', 'global_action_builder.js', 'global_consumption_row.js', 'global_plain.js', 'global_plain_row.js',
+        'global_plain_sum.js', 'global_plain_table.js', 'global_result.js', 'global_result_table.js', 'global_result_table_builder.js', 'global_strategy.js',
+        'meter.js', 'sensor_data.js', 'simulation.js', 'street_lighting.js', 'street_lighting_consumption.js', 'utility.js', 'work.js', 'setup_table_column.js',
+        'global_result_import.js', 'stat_general.js'
+    ),
+);
+
+
+
+if (defined('R3_APP_URL')) { // Alitrmenti fa casino con command line tools, perchè la constante è inesistente
+    define('GC_MAP_SET_URL', R3_APP_URL . 'author/');
+    define('GC_INITMAP_URL', GC_MAP_SET_URL . 'services/gcmap.php?jsonformat=true&');
+
+    define('GC_APP_ROOT_URL', R3_APP_URL . 'admin/gisclient/');
+    define('GC_URL', R3_APP_URL . 'admin/gisclient.php');
+}
+
+
+define('R3_STAT_FROM_TEXT_1', 'fino a %s');
+define('R3_STAT_FROM_TEXT_2', 'bis %s');
+define('R3_STAT_BETWEEN_TEXT_1', 'tra %s e %s');
+define('R3_STAT_BETWEEN_TEXT_2', 'von %s und %s');
+define('R3_STAT_TO_TEXT_1', 'oltre %s');
+define('R3_STAT_TO_TEXT_2', 'mehr als %s');
