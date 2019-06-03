@@ -1,0 +1,9 @@
+vars {
+    $img_path = ../../../../images;
+    $font_family = Verdana, Arial, Helvetica, sans-serif;
+	$font_size = 11px;
+	$font_size_big = 12px;
+	$font_size_small = 10px;
+	$font_size_sub = 9px;
+	
+}

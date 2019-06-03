@@ -1,0 +1,8 @@
+/* COLORS Orange */
+
+vars {
+    $color = #FE944B;
+    $darkcolor = #A94500;
+    $hovercolor = #FF6800;
+    $bordercolor = #F6901F;
+}

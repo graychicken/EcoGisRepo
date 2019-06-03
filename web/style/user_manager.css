@@ -1,0 +1,66 @@
+* {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size:11px;
+}
+
+body.border {
+  padding:10px;
+  margin:0px;
+}
+
+/* Alignment */
+.function_list {
+  float:right;
+}
+.function_list2 {
+  position:absolute;
+  right:14px;
+  top:13px;
+}
+.function_list2 img {
+  cursor:pointer;
+}
+
+/* tag text */
+h3 {
+  font-size:12px;
+  margin:0px 0px 15px 0px;
+  padding:0px;
+}
+
+/* Forms */
+.um_table_form {
+  border-collapse:collapse;
+  border:1px solid #cccccc;
+}
+.um_table_form th {
+  font-weight:normal;
+  text-align:right;
+  padding:1px;
+}
+.um_table_form td {
+  padding:1px;
+}
+.um_table_form .separator td {
+  border-top:1px solid #cccccc;
+  padding:0px;
+}
+
+/* Filters */
+fieldset.um_filter {
+  margin:0px 0px 10px 0px;
+  padding:5px;
+  border:1px solid #F6901F;
+}
+fieldset.um_filter legend {
+  margin-top:-5px;
+  color:#FF6800;
+  font-size:12px;
+}
+fieldset.um_filter .um_filter_fields div {
+  float:left;
+  white-space:nowrap;
+  height:22px;
+  margin-right:10px;
+}
+

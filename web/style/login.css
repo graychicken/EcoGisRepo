@@ -1,0 +1,107 @@
+* {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+}
+body {
+    text-align:center;
+    margin:0px;
+    padding:0px;
+}
+
+.Lmessage {
+    background-color:#FFFFCC;
+    border:1px solid #666666;
+    padding:2px;
+}
+
+.Lcontainer {
+    width: 500px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top:-150px;
+    margin-left:-250px;
+    border:1px dashed #cccccc;
+    background-color:#f5f5f5;
+}
+
+.Lheader {
+    clear:both;
+    background-color:#ffffff;
+    padding:10px;
+}
+.Lheader .Llogosx {
+    text-align:left;
+}
+.Lheader .Llogodx {
+    float:right;
+}
+
+.Ltitle {
+    background-color: #cccccc;
+    border-top:1px solid #b1b1b1;
+    border-bottom:1px solid #b1b1b1;
+    text-align:left;
+    padding:3px;
+}
+.Ltitle .error {
+    color:#dd0000;
+}
+
+.Lform {
+    clear:both;
+    padding:45px 40px 20px 40px;
+}
+.Lform div {
+    padding-bottom:10px;
+    text-align:right;
+    width:280px;
+    margin:auto;
+}
+.Lform form {
+    margin:0px;
+    padding:0px;
+}
+
+.Llist {
+    clear:both;
+    padding:30px;
+    text-align:left;
+}
+.Llist table {
+    border-collapse:collapse;
+}
+.Llist table td {
+    padding:10px;
+}
+.Llist img {
+    border:0px;
+}
+
+.Lloading {
+    clear:both;
+    margin-bottom:20px;
+}
+
+.Lwarning {
+    clear:both;
+    background-image:url('../images/ico_warning.png');
+    background-repeat:no-repeat;
+    text-align:left;
+    padding:2px 0px 0px 20px;
+    margin:0px 10px 10px 10px;
+}
+
+.Lfooter {
+    border-top:1px solid #cccccc;
+    background-color:#ffffff;
+    clear:both;
+    padding:5px;
+}
+.Lfooter a {
+    color:#666666;
+    text-decoration:none;
+}
+.Lfooter a:hover {
+    text-decoration:underline;
+}

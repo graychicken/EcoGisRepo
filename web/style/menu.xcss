@@ -1,0 +1,47 @@
+.main_menu {
+  margin:3px;
+}
+
+.main_menu .menu_title,
+.main_menu .menu_title_hover {
+  margin-bottom:3px;
+  background-color:$color;
+  padding:3px;
+  border:1px solid $darkcolor;
+  color:#ffffff;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+}
+.main_menu .menu_title_hover {
+  background-color:$hovercolor;
+  cursor:pointer;
+}
+
+.main_menu .menublock {
+  margin:7px;
+  padding:0px;
+  list-style-type:none;
+}
+.main_menu .menublock .menu_item_off,
+.main_menu .menublock .menu_item_on,
+.main_menu .menublock .menu_disabled {
+  margin-bottom:2px;
+}
+.main_menu .menublock .menu_item_on,
+.main_menu .menublock .menu_item_hover {
+  margin-bottom:2px;
+  cursor:pointer;
+  color:$hovercolor;
+}
+.main_menu .menublock .menu_disabled {
+  color:#999999;
+  font-style:italic;
+  cursor:default;
+}
+
+.main_menu .menublock .menu_hr hr {
+  border-top: 1px dashed #666666;
+  border-bottom-style: none;
+  height: 1px;
+  width: 90%;
+}

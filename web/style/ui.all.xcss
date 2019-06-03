@@ -1,0 +1,27 @@
+/* Needed to show the calendar inside a jquery popup*/
+#ui-datepicker-div {
+    z-index: 9999999;
+}
+.ui-tabs {
+}
+.ui-tabs .ui-tabs-panel {
+  padding:0 !important;
+  overflow:auto !important;
+}
+
+/*icona simpletable asc./disc.*/
+img.ui-icon {
+  display:inline;
+  margin-bottom:-4px
+}
+
+/*icone jquery dentro button*/
+.function_list button .ui-icon {
+	height:10px;
+	width:10px;
+	margin:auto;
+}
+/* posizione img icona */
+button .ui-icon-gear{
+	background-position: -196px -116px;
+}

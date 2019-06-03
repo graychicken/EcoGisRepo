@@ -1,0 +1,119 @@
+/* 
+
+SS: TEMPORANEO PER GESTIONE UTENTI
+
+*/
+
+
+.menu_table
+{
+	width: 160px;
+	background-color:#F4C493;
+	border-collapse:collapse;
+	border: 1px solid #b1b1b1;
+	margin: 0px;
+}
+
+.menu_table table
+{
+	width: 100%;
+}
+
+/* HR - separetor */
+.menu_table table hr
+{
+      border-top: 1px dashed #666666;
+	  border-bottom-style: none;
+	  height: 1px;
+	  width: 70%;
+}
+
+/* Definizione header */
+.menu_table a
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.menu_table th
+{
+	height: 20px;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#FFFFFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+.menu_table th img
+{
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+/* Rollover td */
+.menu_td_off
+{
+	border: 1px solid #F4C493;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+.menu_td_on
+{
+	border: 1px outset #FBE7D2;
+	background-color: #FBE7D2;
+	cursor: pointer;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+.menu_td_hover
+{
+	border: 1px inset #F4AE67;
+	background-color:#F4AE67;
+	cursor: pointer;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+
+/* Definizione link menu */
+.menu_table table a
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+}
+/* HOVER del menu
+.menu table a:hover {
+	color: #666666;
+}
+*/
+.menu_item_on {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* Disabilitato */
+.menu_table .menu_disabled_td
+{
+	padding-left: 5px;
+	font-style: oblique;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #8E8E8E;
+	cursor: default;
+}
+
+/* Colorazioni in base alla tipologia */
+.menu_th,
+.menu_th_hover
+{
+	background-color:#FE944B;
+}

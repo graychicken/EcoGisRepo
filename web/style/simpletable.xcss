@@ -1,0 +1,191 @@
+/* Table grid */
+.grid,
+.grid_wrap {
+  border-collapse: collapse;
+  border: 1px solid #a0a0a0;
+  font-family: $font_family;
+  font-size: 10px;
+  table-layout:fixed;
+  vertical-align: top;
+}
+.grid td {
+  height:19px;
+}
+.grid_bold {
+  overflow: hidden;
+  cursor: default;
+  white-space: nowrap;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+.grid_over_bold {
+  overflow: hidden;
+  cursor: default;
+  white-space: nowrap;
+  background-color: #cccccc;
+  font-weight: bold;
+}
+.grid_normal,
+.grid_wrap_normal  {
+  background-color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+}
+.grid_type {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+  background-color: #FFCC99;
+}
+.grid_expired {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+  background-color: #FF9999;
+}
+.grid_has_exp_date {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+  background-color: #FFCC66;
+}
+.grid_eliminated {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+  background-color: #e5e5e5;
+  font-style:italic;
+}
+.grid_eliminated_over {
+  background-color: #cccccc;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+  font-style:italic;
+}
+.grid_over,
+.grid_wrap_over   {
+  background-color: #cccccc;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+}
+.grid_td,
+.grid_wrap_td {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1px 4px 1px 2px;
+  font-size: 10px;
+  border-bottom: 1px dotted #a0a0a0;
+  border-top: 1px dotted #a0a0a0;
+}
+th.grid_header,
+th.grid_wrap_header  {
+  overflow: hidden;
+  padding: 3px 2px 4px 2px;
+  color: #000000;
+  font-weight: normal;
+  font-size: 11px;
+  background: url("../images/grid_header.png");
+  background-position:bottom;
+  background-repeat:repeat-x;
+  background-color: #EAE9D9;
+  TEXT-DECORATION: none;
+  border-left: 1px solid #a0a0a0;
+  cursor:default;
+}
+th.grid_header_sort,
+th.grid_wrap_header_sort  {
+  overflow: hidden;
+  padding: 3px 2px 4px 2px;
+  color: #000000;
+  font-weight: normal;
+  font-size: 11px;
+  background: url("../images/grid_header.png");
+  background-position:bottom;
+  background-repeat:repeat-x;
+  background-color: #EAE9D9;
+  border-left: 1px solid #a0a0a0;
+  text-decoration: underline;
+  cursor:pointer;
+}
+
+
+
+.header_checkbox_intermediate {
+  border: 1px solid #666666;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+}
+
+/* Navigation bar */
+.navigation {
+  font-family: $font_family;
+  font-size:11px;
+  border-collapse:collapse;
+  margin:5px auto 5px auto;
+}
+.navigation td {
+  padding:0px;
+}
+.navigation input {
+  font-family: $font_family;
+  font-size:11px;
+  text-align:center;
+  width:25px;
+}
+.navigation .navigation_buttons,
+.navigation .navigation_off {
+  padding:2px;
+  border:1px solid #ffffff;
+}
+.navigation .navigation_buttons {
+  width:80px;
+}
+.navigation .navigation_on {
+  padding:2px;
+  font-weight: bold;
+  border:1px solid #cccccc;
+  background-color:#e5e5e5;
+  cursor:default;
+}
+.navigation .navigation_over {
+  padding:2px;
+  background-color:#b1b1b1;
+  border:1px solid #999999;
+  cursor:pointer;
+}
+.navigation .navigation_disabled {
+  padding:2px;
+  color:#999999;
+  cursor:default;
+}
+.navigation .navigation_search {
+  padding-left:15px;
+}
+.navigation_not_found {
+  font-family: $font_family;
+  font-size:11px;
+  padding:2px;
+}
+
+
+.grid_payment_status_ok {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+  background-color: #7DFF7D;
+}
+.grid_payment_status_ko {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+  background-color: #FF7D7D;
+}
+.grid_payment_status_mk {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:default;
+  background-color: #cccccc;
+}
